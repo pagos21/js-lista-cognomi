@@ -3,6 +3,7 @@ var arr = ["Hutz", "Burns", "Riviera", "Gamble", "Simpson"];
 
 // prendo input utente
   btn.addEventListener("click" ,function() {
+    // Al click pulisco la lista
     document.getElementById("lista").innerHTML = "";
 
 
@@ -14,6 +15,12 @@ while (true) {
 // Se la stringa è vuota esco dal ciclo
   if (lname == "") {
     alert("Lname non inserito");
+    break;
+  }
+
+// Questo non lo prende
+  else if (/\d/.test(lname)) {
+    alert("Solo caratteri, Grazie");
     break;
   }
   // Converto a Maiusc la prima lettera!
@@ -32,10 +39,12 @@ while (true) {
       break;
   }
   arr.push(lname);
-  break;
 
-  }
-// Al di fuori del ciclo while stampo sempre il contenuto dell'array
+  break;
+} //fine while True
+
+
+// Al di fuori del ciclo while stampo sempre il contenuto dell'array in ordine
   var sort = arr.sort();
 
 
@@ -43,8 +52,15 @@ while (true) {
       document.getElementById("lista").innerHTML += "<li>" + arr[i] + "</li>";
 }
 
-    document.getElementById("sorted2").innerHTML = "<br>" + lname + " now in HUMAN position: " + (arr.indexOf(lname) +1);
-    document.getElementById("sorted2").innerHTML += "<br>" + lname + " now in INDEX position: " + arr.indexOf(lname);
+// Anche questo if lo ignora
+if (lname == "" || /\d/.test(lname)) {
+  document.getElementById("sorted2").innerHTML = "";
+
+} else {
+  document.getElementById("sorted2").innerHTML = "<br>" + lname + " now in HUMAN position: " + (arr.indexOf(lname) +1);
+  document.getElementById("sorted2").innerHTML += "<br>" + lname + " now in INDEX position: " + arr.indexOf(lname);
+}
+
 
 
     // ALT sol
