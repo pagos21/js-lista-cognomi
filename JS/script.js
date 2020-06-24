@@ -18,7 +18,7 @@ while (true) {
     break;
   }
 
-// Questo non lo prende
+// se contiene numeri esco
   else if (/\d/.test(lname)) {
     alert("Solo caratteri, Grazie");
     break;

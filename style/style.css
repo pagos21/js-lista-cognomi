@@ -4,6 +4,29 @@
   box-sizing: border-box;
 }
 
+h2{
+  color: red;
+  margin: 10px 0;
+}
+
+.content {
+  text-align: center;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+  margin: 10px 25%;
+  padding: 10px 0;
+  transition: all .5s;
+}
+
+.content:hover{
+  background-color: orange;
+  border: black solid 1px;
+}
+
 .content p {
   margin: 10px 0;
 }
@@ -11,4 +34,27 @@
 .content li{
   font-weight: bold;
   color: blue;
+  list-style: none;
+}
+
+input{
+  font-style: italic;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  font-weight: bold;
+
+}
+
+button {
+  background-color: orange;
+  padding: 5px;
+  transition: all .5s;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+button:active{
+  transform: scale(.9);
 }
