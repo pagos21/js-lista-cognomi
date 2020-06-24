@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content p {
+  margin: 10px 0;
+}
+
+.content li{
+  font-weight: bold;
+  color: blue;
+}
