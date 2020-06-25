@@ -52,7 +52,6 @@ while (true) {
       document.getElementById("lista").innerHTML += "<li>" + arr[i] + "</li>";
 }
 
-// Anche questo if lo ignora
 if (lname == "" || /\d/.test(lname)) {
   document.getElementById("sorted2").innerHTML = "";
 
