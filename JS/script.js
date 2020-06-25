@@ -24,7 +24,7 @@ while (true) {
     break;
   }
   // Converto a Maiusc la prima lettera!
-  lname = lname[0].toLocaleUpperCase() + lname.slice(1);
+  lname = lname[0].toLocaleUpperCase() + lname.slice(1).toLowerCase();
 
   var exist = false;
   for (var i = 0; i < arr.length; i++) {
